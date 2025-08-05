@@ -145,7 +145,7 @@ function PhoneColumn({ phone }: { phone: Phone }) {
           fill
           sizes="20vw"
           className="object-contain"
-          data-ai-hint="smartphone"
+          data-ai-hint={`${phone.brand} ${phone.name}`}
         />
       </div>
       <h3 className="text-2xl font-bold font-headline">{phone.name}</h3>
