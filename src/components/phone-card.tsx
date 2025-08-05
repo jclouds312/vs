@@ -41,7 +41,7 @@ export function PhoneCard({ phone, isSelected, onSelect, selectionDisabled }: Ph
             className="w-6 h-6"
           />
         </div>
-        <div className="aspect-[3/4] w-full relative">
+        <div className="aspect-[4/5] w-full relative">
             <Image
                 src={phone.image}
                 alt={phone.name}

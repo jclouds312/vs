@@ -70,16 +70,16 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
           <CardDescription>Una comparación detallada lado a lado.</CardDescription>
         </CardHeader>
         <CardContent>
+          <div className="grid grid-cols-2 gap-4 mb-8">
+             <PhoneColumn phone={phone1} />
+             <PhoneColumn phone={phone2} />
+          </div>
           <Table>
             <ComparisonTableHeader>
                 <TableRow>
-                    <TableHead className="w-[200px]"></TableHead>
-                    <TableHead>
-                        <PhoneColumn phone={phone1} />
-                    </TableHead>
-                    <TableHead>
-                        <PhoneColumn phone={phone2} />
-                    </TableHead>
+                    <TableHead className="w-[200px]">Característica</TableHead>
+                    <TableHead>{phone1.name}</TableHead>
+                    <TableHead>{phone2.name}</TableHead>
                 </TableRow>
             </ComparisonTableHeader>
             <TableBody>
@@ -143,20 +143,22 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
 
 function PhoneColumn({ phone }: { phone: Phone }) {
   return (
-    <div className="flex flex-col items-center text-center gap-4 p-4">
-      <div className="relative w-full h-80">
+    <Card className="flex flex-col items-center text-center gap-4 p-4">
+      <div className="relative w-full aspect-[3/4]">
         <Image
           src={phone.image}
           alt={phone.name}
           fill
           sizes="(max-width: 768px) 40vw, 25vw"
-          className="object-contain"
+          className="object-cover rounded-md"
           data-ai-hint={`${phone.brand} ${phone.name}`}
         />
       </div>
-      <h3 className="text-2xl font-bold font-headline">{phone.name}</h3>
-      <p className="text-lg text-muted-foreground">{phone.brand}</p>
+      <div className="flex-1">
+        <h3 className="text-2xl font-bold font-headline">{phone.name}</h3>
+        <p className="text-lg text-muted-foreground">{phone.brand}</p>
+      </div>
       <Badge variant="secondary" className="text-xl font-semibold">${phone.price}</Badge>
-    </div>
+    </Card>
   );
 }
