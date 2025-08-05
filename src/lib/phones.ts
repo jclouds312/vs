@@ -6,7 +6,7 @@ export const phones: Phone[] = [
     name: 'iPhone 15 Pro',
     brand: 'Apple',
     price: 999,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1201.png',
     specs: {
       display: '6.1" Super Retina XDR',
       camera: '48MP Main',
@@ -22,7 +22,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24 Ultra',
     brand: 'Samsung',
     price: 1299,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1202.png',
     specs: {
       display: '6.8" Dynamic AMOLED 2X',
       camera: '200MP Wide',
@@ -38,7 +38,7 @@ export const phones: Phone[] = [
     name: 'Pixel 8 Pro',
     brand: 'Google',
     price: 999,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1203.png',
     specs: {
       display: '6.7" Super Actua LTPO OLED',
       camera: '50MP Octa PD Wide',
@@ -54,7 +54,7 @@ export const phones: Phone[] = [
     name: 'OnePlus 12',
     brand: 'OnePlus',
     price: 799,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1204.png',
     specs: {
       display: '6.82" ProXDR AMOLED',
       camera: '50MP Sony LYT-808',
@@ -70,7 +70,7 @@ export const phones: Phone[] = [
     name: 'iPhone 15',
     brand: 'Apple',
     price: 799,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1205.png',
     specs: {
       display: '6.1" Super Retina XDR',
       camera: '48MP Main',
@@ -86,7 +86,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24',
     brand: 'Samsung',
     price: 799,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1206.png',
     specs: {
       display: '6.2" Dynamic AMOLED 2X',
       camera: '50MP Wide',
@@ -102,7 +102,7 @@ export const phones: Phone[] = [
     name: 'Pixel 8',
     brand: 'Google',
     price: 699,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1207.png',
     specs: {
       display: '6.2" Actua OLED',
       camera: '50MP Octa PD Wide',
@@ -118,7 +118,7 @@ export const phones: Phone[] = [
     name: 'Phone (2)',
     brand: 'Nothing',
     price: 599,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1208.png',
     specs: {
       display: '6.7" LTPO OLED',
       camera: '50MP Main',
@@ -134,7 +134,7 @@ export const phones: Phone[] = [
     name: 'Galaxy A55',
     brand: 'Samsung',
     price: 450,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1209.png',
     specs: {
       display: '6.6" Super AMOLED',
       camera: '50MP Wide',
@@ -150,7 +150,7 @@ export const phones: Phone[] = [
     name: 'Pixel 7a',
     brand: 'Google',
     price: 499,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1210.png',
     specs: {
       display: '6.1" OLED',
       camera: '64MP Quad PD Quad Bayer Wide',
@@ -166,7 +166,7 @@ export const phones: Phone[] = [
     name: 'iPhone SE (2022)',
     brand: 'Apple',
     price: 429,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1211.png',
     specs: {
       display: '4.7" Retina HD',
       camera: '12MP Wide',
@@ -182,7 +182,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 13T Pro',
     brand: 'Xiaomi',
     price: 650,
-    image: 'https://placehold.co/800x1200.png',
+    image: 'https://placehold.co/800x1212.png',
     specs: {
       display: '6.67" CrystalRes AMOLED',
       camera: '50MP Main (Leica)',
