@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table';
+import { Table, TableBody, TableCell, TableRow, TableHead, TableHeader as ComparisonTableHeader } from '@/components/ui/table';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Lightbulb, AlertTriangle, Sparkles } from 'lucide-react';
@@ -65,17 +65,23 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">
-            {phone1.name} vs. {phone2.name}
+            Comparación de Especificaciones
           </CardTitle>
           <CardDescription>Una comparación detallada lado a lado.</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <PhoneColumn phone={phone1} />
-            <PhoneColumn phone={phone2} />
-          </div>
-          <Separator className="my-8" />
           <Table>
+            <ComparisonTableHeader>
+                <TableRow>
+                    <TableHead className="w-[200px]"></TableHead>
+                    <TableHead>
+                        <PhoneColumn phone={phone1} />
+                    </TableHead>
+                    <TableHead>
+                        <PhoneColumn phone={phone2} />
+                    </TableHead>
+                </TableRow>
+            </ComparisonTableHeader>
             <TableBody>
                 {specKeys.map(key => renderSpecRow(key))}
             </TableBody>
@@ -137,13 +143,13 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
 
 function PhoneColumn({ phone }: { phone: Phone }) {
   return (
-    <div className="flex flex-col items-center text-center gap-4">
-      <div className="relative w-48 h-72">
+    <div className="flex flex-col items-center text-center gap-4 p-4">
+      <div className="relative w-full h-80">
         <Image
           src={phone.image}
           alt={phone.name}
           fill
-          sizes="20vw"
+          sizes="(max-width: 768px) 40vw, 25vw"
           className="object-contain"
           data-ai-hint={`${phone.brand} ${phone.name}`}
         />
