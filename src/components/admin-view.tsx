@@ -1,24 +1,52 @@
 "use client";
 
 import { useState } from 'react';
-import { login } from '@/app/admin/actions';
+import { login, handleGenerateImage } from '@/app/admin/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { KeyRound, LogIn } from 'lucide-react';
+import { KeyRound, LogIn, Sparkles, Image as ImageIcon } from 'lucide-react';
 import { phones } from '@/lib/phones';
 import type { Phone } from '@/lib/types';
 import Image from 'next/image';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Skeleton } from './ui/skeleton';
 
 function AdminDashboard() {
+  const { toast } = useToast();
+  const [generatingImageId, setGeneratingImageId] = useState<string | null>(null);
+  const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null);
+
+  const onGenerateImage = async (phone: Phone) => {
+    setGeneratingImageId(phone.id);
+    setGeneratedImageUrl(null);
+
+    const result = await handleGenerateImage(phone.name, phone.brand);
+
+    if (result.success && result.imageUrl) {
+      setGeneratedImageUrl(result.imageUrl);
+      toast({
+        title: 'Imagen Generada',
+        description: `Se ha creado una nueva imagen para ${phone.name}.`,
+      });
+    } else {
+      toast({
+        variant: 'destructive',
+        title: 'Error de Generación',
+        description: result.error || 'No se pudo generar la imagen.',
+      });
+    }
+    setGeneratingImageId(null);
+  };
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Gestionar Teléfonos</CardTitle>
         <CardDescription>
-          Aquí puedes editar la información y las imágenes de los teléfonos.
+          Aquí puedes editar la información y generar imágenes con IA.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -37,9 +65,47 @@ function AdminDashboard() {
                 <p className="text-sm text-muted-foreground">{phone.brand}</p>
               </div>
             </div>
-            <Button variant="outline" size="sm">
-              Editar
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm">
+                Editar
+              </Button>
+               <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => onGenerateImage(phone)}
+                    disabled={generatingImageId === phone.id}
+                  >
+                    {generatingImageId === phone.id ? (
+                      'Generando...'
+                    ) : (
+                      <>
+                        <Sparkles className="mr-2 h-4 w-4" />
+                        Generar Imagen
+                      </>
+                    )}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[525px]">
+                  <DialogHeader>
+                    <DialogTitle>Imagen generada por IA para {phone.name}</DialogTitle>
+                  </DialogHeader>
+                  <div className="flex items-center justify-center p-4">
+                  {generatingImageId === phone.id && !generatedImageUrl && (
+                      <div className="space-y-3">
+                        <Skeleton className="h-[250px] w-[250px] rounded-xl" />
+                        <Skeleton className="h-4 w-[250px]" />
+                        <p className='text-center text-sm text-muted-foreground'>La generación de imágenes puede tardar unos segundos...</p>
+                      </div>
+                  )}
+                  {generatedImageUrl && (
+                    <Image src={generatedImageUrl} alt={`AI generated image of ${phone.name}`} width={400} height={400} className="rounded-md" />
+                  )}
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
         ))}
       </CardContent>

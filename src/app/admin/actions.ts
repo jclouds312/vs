@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from 'zod';
+import { generatePhoneImage, GeneratePhoneImageInputSchema } from '@/ai/flows/generate-phone-image';
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Por favor, introduce un correo electrónico válido." }),
@@ -24,4 +25,15 @@ export async function login(formData: FormData) {
   }
 
   return { success: false, message: 'Credenciales incorrectas. Por favor, inténtalo de nuevo.' };
+}
+
+export async function handleGenerateImage(phoneName: string, phoneBrand: string) {
+  try {
+    const result = await generatePhoneImage({ phoneName, phoneBrand });
+    return { success: true, imageUrl: result.imageUrl };
+  } catch (error) {
+    console.error('Error generating AI image:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Error desconocido';
+    return { success: false, error: `No se pudo generar la imagen: ${errorMessage}` };
+  }
 }
