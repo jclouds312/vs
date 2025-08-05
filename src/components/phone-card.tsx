@@ -71,7 +71,7 @@ export function PhoneCard({ phone, isSelected, onSelect, selectionDisabled }: Ph
       </CardContent>
       <CardFooter className="p-4 bg-secondary/50">
         <Badge variant={phone.specs.is5G ? "default" : "outline"} className={cn(phone.specs.is5G ? "bg-accent text-accent-foreground" : "")}>
-          {phone.specs.is5G ? '5G Ready' : '4G LTE'}
+          {phone.specs.is5G ? 'Listo para 5G' : '4G LTE'}
         </Badge>
       </CardFooter>
     </Card>

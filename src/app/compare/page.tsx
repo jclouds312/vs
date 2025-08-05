@@ -25,7 +25,7 @@ export default function ComparePage({
           <Button asChild variant="outline">
             <Link href="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Phone List
+              Volver a la lista de teléfonos
             </Link>
           </Button>
         </div>
@@ -37,17 +37,17 @@ export default function ComparePage({
             <AlertTriangle className="mx-auto h-12 w-12 text-destructive" />
             <CardHeader>
               <CardTitle className="text-2xl font-bold font-headline text-destructive">
-                Comparison Error
+                Error de comparación
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-6">
-                We couldn't load the phones for comparison. Please go back and select two phones.
+                No pudimos cargar los teléfonos para la comparación. Por favor, vuelve y selecciona dos teléfonos.
               </p>
               <Button asChild>
                 <Link href="/">
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Return to Selection
+                  Volver a la selección
                 </Link>
               </Button>
             </CardContent>

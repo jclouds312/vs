@@ -3,7 +3,7 @@
  * @fileOverview Summarizes the key differences between two phones using AI.
  *
  * - generateComparisonSummary - A function that takes two phone specifications and returns a summary of their key differences.
- * - ComparisonSummaryInput - The input type for the generateComparisonSummary function.
+ * - ComparisonSummaryInput - The input type for the generateComparisonsummary function.
  * - ComparisonSummaryOutput - The return type for the generateComparisonSummary function.
  */
 
@@ -11,14 +11,14 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const ComparisonSummaryInputSchema = z.object({
-  phone1Specs: z.string().describe('Specifications of the first phone.'),
-  phone2Specs: z.string().describe('Specifications of the second phone.'),
-  userPreferences: z.string().optional().describe('Optional user preferences or needs.'),
+  phone1Specs: z.string().describe('Especificaciones del primer teléfono.'),
+  phone2Specs: z.string().describe('Especificaciones del segundo teléfono.'),
+  userPreferences: z.string().optional().describe('Preferencias u necesidades opcionales del usuario.'),
 });
 export type ComparisonSummaryInput = z.infer<typeof ComparisonSummaryInputSchema>;
 
 const ComparisonSummaryOutputSchema = z.object({
-  summary: z.string().describe('A concise summary of the key differences between the two phones, highlighting which phone might be better for specific needs.'),
+  summary: z.string().describe('Un resumen conciso de las diferencias clave entre los dos teléfonos, destacando qué teléfono podría ser mejor para necesidades específicas.'),
 });
 export type ComparisonSummaryOutput = z.infer<typeof ComparisonSummaryOutputSchema>;
 
@@ -30,17 +30,17 @@ const comparisonSummaryPrompt = ai.definePrompt({
   name: 'comparisonSummaryPrompt',
   input: {schema: ComparisonSummaryInputSchema},
   output: {schema: ComparisonSummaryOutputSchema},
-  prompt: `You are an AI assistant that helps users compare two smartphones and determine which one is better suited for their needs.
+  prompt: `Eres un asistente de IA que ayuda a los usuarios a comparar dos smartphones y determinar cuál es el más adecuado para sus necesidades.
 
-  You are given the specifications of two phones and optional user preferences.
-  Based on this information, provide a concise summary of their key differences, highlighting which phone might be better for specific needs.
+  Se te proporcionan las especificaciones de dos teléfonos y las preferencias opcionales del usuario.
+  Basándote en esta información, proporciona un resumen conciso de sus diferencias clave, destacando qué teléfono podría ser mejor para necesidades específicas.
 
-  Phone 1 Specifications: {{{phone1Specs}}}
-  Phone 2 Specifications: {{{phone2Specs}}}
+  Especificaciones del Teléfono 1: {{{phone1Specs}}}
+  Especificaciones del Teléfono 2: {{{phone2Specs}}}
 
-  User Preferences: {{#if userPreferences}}{{{userPreferences}}}{{else}}No specific preferences provided.{{/if}}
+  Preferencias del Usuario: {{#if userPreferences}}{{{userPreferences}}}{{else}}No se proporcionaron preferencias específicas.{{/if}}
 
-  Summary:`, 
+  Resumen:`, 
 });
 
 const comparisonSummaryFlow = ai.defineFlow(

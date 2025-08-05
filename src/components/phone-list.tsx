@@ -71,7 +71,7 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
           <div className="md:col-span-2">
             <Input
-              placeholder="Search by name..."
+              placeholder="Buscar por nombre..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-card"
@@ -80,10 +80,10 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
           <div>
             <Select value={selectedBrand} onValueChange={setSelectedBrand}>
               <SelectTrigger className="w-full bg-card">
-                <SelectValue placeholder="Select brand" />
+                <SelectValue placeholder="Seleccionar marca" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Brands</SelectItem>
+                <SelectItem value="all">Todas las marcas</SelectItem>
                 {brands.map((brand) => (
                   <SelectItem key={brand} value={brand}>
                     {brand}
@@ -94,7 +94,7 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
           </div>
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm">
-              <span className="text-muted-foreground">Max Price</span>
+              <span className="text-muted-foreground">Precio máximo</span>
               <span className="font-medium text-primary">${priceRange[0]}</span>
             </div>
             <Slider
@@ -109,7 +109,7 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
         <div className="flex justify-start items-center mt-4">
             <Button variant="ghost" onClick={clearFilters} className="text-sm text-muted-foreground">
               <X className="w-4 h-4 mr-1" />
-              Clear Filters
+              Limpiar filtros
             </Button>
         </div>
       </Card>
@@ -119,15 +119,15 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className='text-center sm:text-left'>
               <h3 className="font-semibold font-headline">
-                {selectedPhones.length} / 2 Phones Selected for Comparison
+                {selectedPhones.length} / 2 Teléfonos seleccionados para comparar
               </h3>
               <p className="text-sm text-muted-foreground">
-                {selectedPhones.length < 2 ? "Select one more phone to compare." : "Ready to compare!"}
+                {selectedPhones.length < 2 ? "Selecciona un teléfono más para comparar." : "¡Listo para comparar!"}
               </p>
             </div>
             <Link href={`/compare?phone1=${selectedPhones[0]}&phone2=${selectedPhones[1]}`} passHref>
               <Button disabled={selectedPhones.length !== 2} size="lg">
-                Compare Now
+                Comparar ahora
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -150,12 +150,12 @@ export function PhoneList({ phones }: { phones: Phone[] }) {
       ) : (
         <Card className="text-center py-20 px-6">
           <SlidersHorizontal className="mx-auto h-12 w-12 text-muted-foreground" />
-          <h3 className="mt-4 text-xl font-semibold font-headline">No Phones Found</h3>
+          <h3 className="mt-4 text-xl font-semibold font-headline">No se encontraron teléfonos</h3>
           <p className="mt-2 text-muted-foreground">
-            Try adjusting your filters to find what you're looking for.
+            Intenta ajustar tus filtros para encontrar lo que buscas.
           </p>
           <Button variant="outline" onClick={clearFilters} className="mt-6">
-            Clear All Filters
+            Limpiar todos los filtros
           </Button>
         </Card>
       )}

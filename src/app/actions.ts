@@ -22,12 +22,12 @@ export async function getAiSummary(
     const input = {
       phone1Specs: formatSpecs(phone1),
       phone2Specs: formatSpecs(phone2),
-      userPreferences: userPreferences || 'No specific preferences provided.',
+      userPreferences: userPreferences || 'Sin preferencias específicas.',
     };
     const result = await generateComparisonSummary(input);
     return { summary: result.summary, error: null };
   } catch (error) {
     console.error('Error generating AI summary:', error);
-    return { summary: null, error: 'Failed to generate summary. The AI service may be temporarily unavailable. Please try again later.' };
+    return { summary: null, error: 'No se pudo generar el resumen. El servicio de IA puede no estar disponible temporalmente. Por favor, inténtalo de nuevo más tarde.' };
   }
 }

@@ -34,7 +34,7 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
       setError(result.error);
       toast({
         variant: 'destructive',
-        title: 'AI Summary Failed',
+        title: 'Error en el resumen de IA',
         description: result.error,
       });
     } else if (result.summary) {
@@ -47,8 +47,8 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
 
   const renderSpecRow = (key: keyof Phone['specs']) => {
     const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase());
-    const value1 = typeof phone1.specs[key] === 'boolean' ? (phone1.specs[key] ? 'Yes' : 'No') : phone1.specs[key];
-    const value2 = typeof phone2.specs[key] === 'boolean' ? (phone2.specs[key] ? 'Yes' : 'No') : phone2.specs[key];
+    const value1 = typeof phone1.specs[key] === 'boolean' ? (phone1.specs[key] ? 'Sí' : 'No') : phone1.specs[key];
+    const value2 = typeof phone2.specs[key] === 'boolean' ? (phone2.specs[key] ? 'Sí' : 'No') : phone2.specs[key];
     const isDifferent = value1 !== value2;
 
     return (
@@ -67,7 +67,7 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">
             {phone1.name} vs. {phone2.name}
           </CardTitle>
-          <CardDescription>A detailed side-by-side comparison.</CardDescription>
+          <CardDescription>Una comparación detallada lado a lado.</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -87,21 +87,21 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl font-headline">
             <Sparkles className="w-6 h-6 text-primary" />
-            AI-Powered Comparison
+            Comparación con IA
           </CardTitle>
           <CardDescription>
-            Tell us what you care about most (e.g., "long battery life", "great for gaming", "best camera for portraits") to get a personalized summary.
+            Dinos qué es lo que más te importa (ej. "batería de larga duración", "excelente para juegos", "la mejor cámara para retratos") para obtener un resumen personalizado.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <Textarea
-            placeholder="Optional: Enter your preferences here..."
+            placeholder="Opcional: Ingresa tus preferencias aquí..."
             value={preferences}
             onChange={(e) => setPreferences(e.target.value)}
             className="bg-card"
           />
           <Button onClick={handleGenerateSummary} disabled={isLoading} className="w-full sm:w-auto">
-            {isLoading ? 'Generating...' : 'Generate AI Summary'}
+            {isLoading ? 'Generando...' : 'Generar resumen con IA'}
           </Button>
 
           {isLoading && (
@@ -123,7 +123,7 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
           {summary && (
             <Alert className="border-accent">
               <Lightbulb className="h-4 w-4" />
-              <AlertTitle className="font-headline text-accent">Comparison Summary</AlertTitle>
+              <AlertTitle className="font-headline text-accent">Resumen de la Comparación</AlertTitle>
               <AlertDescription className="prose prose-sm max-w-none text-foreground">
                 <p>{summary}</p>
               </AlertDescription>
