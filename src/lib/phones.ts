@@ -272,6 +272,22 @@ export const phones: Phone[] = [
       ram: '16GB',
       is5G: true,
     },
+  },
+  {
+    id: 'xiaomi-14-ultra',
+    name: 'Xiaomi 14 Ultra',
+    brand: 'Xiaomi',
+    price: 1499,
+    image: 'https://i02.appmifile.com/i/S/S-Homepage-14-Ultra-Intro.png',
+    specs: {
+        display: '6.73" WQHD+ Dynamic AMOLED',
+        camera: '50MP Main (Leica)',
+        battery: '5000 mAh',
+        processor: 'Snapdragon 8 Gen 3',
+        storage: '512GB',
+        ram: '16GB',
+        is5G: true,
+    },
   }
 ];
 
