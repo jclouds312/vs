@@ -22,7 +22,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24 Ultra',
     brand: 'Samsung',
     price: 1299,
-    image: 'https://image-us.samsung.com/us/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-kv.jpg?imbypass=true',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/levant/2401/gallery/levant-galaxy-s24-ultra-sm-s928bztgmea-539572629?$650_519_PNG$',
     specs: {
       display: '6.8" Dynamic AMOLED 2X',
       camera: '200MP Wide',
@@ -86,7 +86,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24',
     brand: 'Samsung',
     price: 799,
-    image: 'https://image-us.samsung.com/us/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-kv-mb.jpg?imbypass=true',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2401/gallery/es-galaxy-s24-sm-s921bzydeee-539502909?$650_519_PNG$',
     specs: {
       display: '6.2" Dynamic AMOLED 2X',
       camera: '50MP Wide',
@@ -134,7 +134,7 @@ export const phones: Phone[] = [
     name: 'Galaxy A55',
     brand: 'Samsung',
     price: 450,
-    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2401/gallery/es-galaxy-a55-5g-sm-a556b-sma556bzkdee-539504818?$650_519_PNG$',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2401/gallery/es-galaxy-a55-5g-sm-a556b-sma556blvdeee-539505084?$650_519_PNG$',
     specs: {
       display: '6.6" Super AMOLED',
       camera: '50MP Wide',
