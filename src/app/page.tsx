@@ -10,10 +10,10 @@ export default function Home() {
         <div className="space-y-8">
           <div className="text-center space-y-2">
             <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
-              Encuentra tu próximo Smartphone
+              Compara Smartphones
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Compara los últimos modelos lado a lado y obtén un resumen con IA para tomar la decisión correcta.
+              Selecciona dos teléfonos para ver una comparación detallada lado a lado y obtener un resumen con IA para tomar la decisión correcta.
             </p>
           </div>
           <PhoneList phones={phones} />
