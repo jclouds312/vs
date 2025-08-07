@@ -144,13 +144,13 @@ export function ComparisonView({ phone1, phone2 }: { phone1: Phone; phone2: Phon
 function PhoneColumn({ phone }: { phone: Phone }) {
   return (
     <Card className="flex flex-col items-center text-center gap-4 p-4">
-      <div className="relative w-full aspect-[3/4]">
+      <div className="relative w-full aspect-[4/3]">
         <Image
           src={phone.image}
           alt={phone.name}
           fill
           sizes="(max-width: 768px) 40vw, 25vw"
-          className="object-cover rounded-md"
+          className="object-contain rounded-md"
           data-ai-hint={`${phone.brand} ${phone.name}`}
         />
       </div>
