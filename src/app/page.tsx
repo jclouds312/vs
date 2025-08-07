@@ -8,7 +8,8 @@ import { ComparisonView } from '@/components/comparison-view';
 import { phones } from '@/lib/phones';
 import type { Phone } from '@/lib/types';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Search } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
   const [phone1, setPhone1] = useState<Phone | null>(null);
@@ -19,7 +20,20 @@ export default function Home() {
     setPhone2(null);
   };
 
+  const handleSampleSearch = (phone1Name: string, phone2Name: string) => {
+    const p1 = phones.find(p => p.name === phone1Name);
+    const p2 = phones.find(p => p.name === phone2Name);
+    if (p1) setPhone1(p1);
+    if (p2) setPhone2(p2);
+  };
+
   const showComparison = phone1 && phone2;
+
+  const sampleSearches = [
+    { name: 'iPhone 15 Pro vs Galaxy S24 Ultra', p1: 'iPhone 15 Pro', p2: 'Galaxy S24 Ultra' },
+    { name: 'Pixel 8 Pro vs OnePlus 12', p1: 'Pixel 8 Pro', p2: 'OnePlus 12' },
+    { name: 'Gama Media: Galaxy A55 vs Pixel 7a', p1: 'Galaxy A55', p2: 'Pixel 7a' },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -53,6 +67,24 @@ export default function Home() {
                     title="Teléfono 2"
                     disabledIds={phone1 ? [phone1.id] : []}
                   />
+                </div>
+                <div className="text-center space-y-3 pt-4">
+                  <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                    <Search className="w-4 h-4" />
+                    <h3 className="text-sm font-semibold">Búsquedas de ejemplo</h3>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center gap-2">
+                    {sampleSearches.map(search => (
+                       <Badge 
+                          key={search.name}
+                          variant="outline" 
+                          onClick={() => handleSampleSearch(search.p1, search.p2)}
+                          className="cursor-pointer hover:bg-accent"
+                        >
+                          {search.name}
+                       </Badge>
+                    ))}
+                  </div>
                 </div>
             </>
           ) : (
