@@ -99,7 +99,7 @@ export default function Home() {
                               key={search.name}
                               variant="outline" 
                               onClick={() => handleSampleSearch(search.p1, search.p2)}
-                              className="cursor-pointer hover:bg-accent"
+                              className="cursor-pointer hover:bg-accent hover:text-accent-foreground"
                             >
                               {search.name}
                            </Badge>
