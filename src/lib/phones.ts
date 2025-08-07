@@ -115,7 +115,7 @@ export const phones: Phone[] = [
   },
   {
     id: 'nothing-phone-2',
-    name: 'Phone (2)',
+    name: 'Nothing Phone (2)',
     brand: 'Nothing',
     price: 599,
     image: 'https://cdn.shopify.com/s/files/1/0663/8213/1168/files/Phone_2__1_2048x.png?v=1691992087',
@@ -150,7 +150,7 @@ export const phones: Phone[] = [
     name: 'Pixel 7a',
     brand: 'Google',
     price: 499,
-    image: 'https://m.media-amazon.com/images/I/71m6kCB99FL.jpg',
+    image: 'https://m.media-amazon.com/images/I/71m6kCB99FL._AC_UF894,1000_QL80_.jpg',
     specs: {
       display: '6.1" OLED',
       camera: '64MP Quad PD Quad Bayer Wide',
@@ -182,7 +182,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 13T Pro',
     brand: 'Xiaomi',
     price: 650,
-    image: 'https://i02.appmifile.com/v1/img/random/L2560x1440_30d220803c1555a6d36d3b417c493ed2.jpg',
+    image: 'https://i01.appmifile.com/v1/BIG/N_4_4/M_BIG_13T-Pro_13T-Pro-Alpine-Blue_1695710606.png',
     specs: {
       display: '6.67" CrystalRes AMOLED',
       camera: '50MP Main (Leica)',
