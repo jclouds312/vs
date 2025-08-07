@@ -95,14 +95,15 @@ export default function Home() {
                        <div key={group.category} className="flex flex-wrap items-center justify-center gap-2">
                           <p className="w-full text-center font-bold text-sm text-primary md:w-auto md:text-right">{group.category}:</p>
                           {group.searches.map(search => (
-                            <Badge 
+                            <Button 
                               key={search.name}
-                              variant="outline" 
+                              variant="outline"
+                              size="sm"
                               onClick={() => handleSampleSearch(search.p1, search.p2)}
-                              className="cursor-pointer hover:bg-accent hover:text-accent-foreground"
+                              className="h-auto px-2.5 py-0.5 text-xs font-semibold rounded-full"
                             >
                               {search.name}
-                           </Badge>
+                           </Button>
                           ))}
                        </div>
                     ))}
