@@ -58,6 +58,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'dlcdnwebimgs.asus.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'i02.appmifile.com'
+      }
     ],
   },
 };
