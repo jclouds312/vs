@@ -22,7 +22,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24 Ultra',
     brand: 'Samsung',
     price: 1299,
-    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2401/gallery/es-galaxy-s24-ultra-sm-s928bztgeub-539572228?$650_519_PNG$',
+    image: 'https://image-us.samsung.com/us/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-kv-Titanium-Gray-mo.jpg?imbypass=true',
     specs: {
       display: '6.8" Dynamic AMOLED 2X',
       camera: '200MP Wide',
