@@ -6,7 +6,7 @@ export const phones: Phone[] = [
     name: 'iPhone 15 Pro',
     brand: 'Apple',
     price: 999,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702708',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg',
     specs: {
       display: '6.1" Super Retina XDR',
       camera: '48MP Main',
@@ -22,7 +22,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24 Ultra',
     brand: 'Samsung',
     price: 1299,
-    image: 'https://image-us.samsung.com/us/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-kv-Titanium-Gray-mo.jpg?imbypass=true',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg',
     specs: {
       display: '6.8" Dynamic AMOLED 2X',
       camera: '200MP Wide',
@@ -38,7 +38,7 @@ export const phones: Phone[] = [
     name: 'Pixel 8 Pro',
     brand: 'Google',
     price: 999,
-    image: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/pixel_8_pro_watch_2_porcelain_2_1.width-1300.height-731.format-webp.webp',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8-pro.jpg',
     specs: {
       display: '6.7" Super Actua LTPO OLED',
       camera: '50MP Octa PD Wide',
@@ -54,7 +54,7 @@ export const phones: Phone[] = [
     name: 'OnePlus 12',
     brand: 'OnePlus',
     price: 799,
-    image: 'https://oasis.op-mobile.opera.com/op12/02-5a5f78/02-5a5f78-360.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg',
     specs: {
       display: '6.82" ProXDR AMOLED',
       camera: '50MP Sony LYT-808',
@@ -70,7 +70,7 @@ export const phones: Phone[] = [
     name: 'iPhone 15',
     brand: 'Apple',
     price: 799,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692923777975',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg',
     specs: {
       display: '6.1" Super Retina XDR',
       camera: '48MP Main',
@@ -86,7 +86,7 @@ export const phones: Phone[] = [
     name: 'Galaxy S24',
     brand: 'Samsung',
     price: 799,
-    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2401/gallery/es-galaxy-s24-sm-s921bzygeub-539572093?$650_519_PNG$',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-5g-sm-s921.jpg',
     specs: {
       display: '6.2" Dynamic AMOLED 2X',
       camera: '50MP Wide',
@@ -102,7 +102,7 @@ export const phones: Phone[] = [
     name: 'Pixel 8',
     brand: 'Google',
     price: 699,
-    image: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/images/H_Pixel_8_Hazel_Horizontal.width-1300.height-731.format-webp.webp',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8.jpg',
     specs: {
       display: '6.2" Actua OLED',
       camera: '50MP Octa PD Wide',
@@ -118,7 +118,7 @@ export const phones: Phone[] = [
     name: 'Nothing Phone (2)',
     brand: 'Nothing',
     price: 599,
-    image: 'https://cdn.shopify.com/s/files/1/0663/8213/1168/files/Phone_2__1_2048x.png?v=1691992087',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/nothing-phone2.jpg',
     specs: {
       display: '6.7" LTPO OLED',
       camera: '50MP Main',
@@ -134,7 +134,7 @@ export const phones: Phone[] = [
     name: 'Galaxy A55',
     brand: 'Samsung',
     price: 450,
-    image: 'https://images.samsung.com/is/image/samsung/p6pim/es/2403/gallery/es-galaxy-a55-5g-sm-a556bzkgeub-539828322?$650_519_PNG$',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg',
     specs: {
       display: '6.6" Super AMOLED',
       camera: '50MP Wide',
@@ -150,7 +150,7 @@ export const phones: Phone[] = [
     name: 'Pixel 7a',
     brand: 'Google',
     price: 499,
-    image: 'https://m.media-amazon.com/images/I/71m6kCB99FL._AC_UF894,1000_QL80_.jpg',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-7a.jpg',
     specs: {
       display: '6.1" OLED',
       camera: '64MP Quad PD Quad Bayer Wide',
@@ -166,7 +166,7 @@ export const phones: Phone[] = [
     name: 'iPhone SE (2022)',
     brand: 'Apple',
     price: 429,
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-finish-select-202207-starlight?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1655312338138',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg',
     specs: {
       display: '4.7" Retina HD',
       camera: '12MP Wide',
@@ -182,7 +182,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 13T Pro',
     brand: 'Xiaomi',
     price: 650,
-    image: 'https://i01.appmifile.com/v1/BIG/N_4_4/M_BIG_13T-Pro_13T-Pro-Alpine-Blue_1695710606.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13t-pro.jpg',
     specs: {
       display: '6.67" CrystalRes AMOLED',
       camera: '50MP Main (Leica)',
@@ -198,7 +198,7 @@ export const phones: Phone[] = [
     name: 'Realme GT 2 Pro',
     brand: 'Realme',
     price: 749,
-    image: 'https://image.realme.com/eu/global/gt2-pro/m-img-2-1.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/realme-gt2-pro.jpg',
     specs: {
       display: '6.7" 2K Super Reality LTPO 2.0',
       camera: '50MP Sony IMX766 OIS',
@@ -214,7 +214,7 @@ export const phones: Phone[] = [
     name: 'Realme 12 Pro+',
     brand: 'Realme',
     price: 499,
-    image: 'https://image.realme.com/eu/global/12-pro-plus-5g/img-pc-3-2.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/realme-12-pro-plus.jpg',
     specs: {
       display: '6.7" Curved Vision OLED',
       camera: '64MP Periscope Portrait',
@@ -230,7 +230,7 @@ export const phones: Phone[] = [
     name: 'Realme C67',
     brand: 'Realme',
     price: 229,
-    image: 'https://image.realme.com/content/dam/realme/global/c67/sunny-oasis.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/realme-c67-4g.jpg',
     specs: {
       display: '6.72" FHD+',
       camera: '108MP 3X In-sensor Zoom',
@@ -246,7 +246,7 @@ export const phones: Phone[] = [
     name: 'Sony Xperia 1 V',
     brand: 'Sony',
     price: 1399,
-    image: 'https://www.sony.es/image/5d02da96015b940989345e8354c03387?fmt=pjpeg&wid=1400&resMode=bisharp',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg',
     specs: {
       display: '6.5" 4K HDR OLED',
       camera: '48MP Exmor T for mobile',
@@ -262,7 +262,7 @@ export const phones: Phone[] = [
     name: 'Asus ROG Phone 8 Pro',
     brand: 'Asus',
     price: 1199,
-    image: 'https://dlcdnwebimgs.asus.com/gain/3D7A6154-A60A-4074-927A-459E4E42D5F0/w750/h470',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-8-pro.jpg',
     specs: {
       display: '6.78" Samsung AMOLED',
       camera: '50MP IMX890',
@@ -278,7 +278,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 14 Ultra',
     brand: 'Xiaomi',
     price: 1499,
-    image: 'https://i02.appmifile.com/i/S/S-Homepage-14-Ultra-Intro.png',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg',
     specs: {
         display: '6.73" WQHD+ Dynamic AMOLED',
         camera: '50MP Main (Leica)',

@@ -61,6 +61,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'i02.appmifile.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'fdn2.gsmarena.com'
       }
     ],
   },
