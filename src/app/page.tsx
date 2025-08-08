@@ -61,7 +61,7 @@ function SmartCompareContent() {
         <div className="space-y-4">
           {!showComparison ? (
              <>
-               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start justify-center">
+               <div className="grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-2 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
@@ -70,8 +70,8 @@ function SmartCompareContent() {
                     title="Smartphone 1 a elegir"
                     disabledIds={phone2 ? [phone2.id] : []}
                   />
-                  <div className="hidden md:flex items-center justify-center h-full">
-                    <p className="text-xl font-bold text-primary self-center pt-12">VS</p>
+                  <div className="flex items-center justify-center h-full pt-16">
+                    <p className="text-sm font-bold text-muted-foreground self-center">a comparar versus</p>
                   </div>
                   <PhoneSelector
                     phones={phones}
@@ -82,7 +82,6 @@ function SmartCompareContent() {
                     disabledIds={phone1 ? [phone1.id] : []}
                   />
                 </div>
-                 <div className="text-center text-lg font-semibold text-muted-foreground -mt-2">a comparar versus</div>
                 <div className="text-center space-y-6 pt-8">
                   <div className="flex items-center justify-center gap-2 text-muted-foreground">
                     <Search className="w-4 h-4" />
