@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/header';
 import { PhoneSelector } from '@/components/phone-selector';
@@ -57,7 +57,7 @@ function SmartCompareContent() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isEmbedded && <Header />}
-      <main className="flex-1 container mx-auto p-4 md:p-8">
+      <main className="flex-1 container mx-auto px-4 pt-4 md:pt-8 pb-8">
         <div className="space-y-8">
           {!showComparison ? (
              <>
@@ -137,8 +137,8 @@ function SmartCompareContent() {
 export default function Home() {
   // El Suspense Boundary es necesario para que useSearchParams funcione correctamente durante el renderizado del lado del servidor.
   return (
-    <React.Suspense fallback={<div>Cargando...</div>}>
+    <Suspense fallback={<div>Cargando...</div>}>
       <SmartCompareContent />
-    </React.Suspense>
+    </Suspense>
   );
 }
