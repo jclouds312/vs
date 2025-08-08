@@ -57,18 +57,10 @@ function SmartCompareContent() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isEmbedded && <Header />}
-      <main className="flex-1 container mx-auto px-4 pt-4 md:pt-8 pb-8">
+      <main className="flex-1 container mx-auto px-4 pt-2 md:pt-4 pb-8">
         <div className="space-y-8">
           {!showComparison ? (
              <>
-              <div className="text-center space-y-2">
-                <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
-                  Compara Smartphones
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Selecciona dos teléfonos para ver una comparación detallada lado a lado y obtener un resumen con IA para tomar la decisión correcta.
-                </p>
-              </div>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                   <PhoneSelector
                     phones={phones}
@@ -135,7 +127,6 @@ function SmartCompareContent() {
 }
 
 export default function Home() {
-  // El Suspense Boundary es necesario para que useSearchParams funcione correctamente durante el renderizado del lado del servidor.
   return (
     <Suspense fallback={<div>Cargando...</div>}>
       <SmartCompareContent />
