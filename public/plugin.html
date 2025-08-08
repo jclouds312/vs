@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plugin - Comparador de Smartphones</title>
+    <title>Plugin Comparador de Smartphones</title>
     <style>
-        body, html {
+        /* Estilos básicos para asegurar que el iframe ocupe todo el espacio */
+        html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
+            overflow: hidden; /* Evita dobles barras de scroll */
         }
         iframe {
             width: 100%;
             height: 100%;
-            border: none;
+            border: none; /* Elimina el borde del iframe */
         }
     </style>
 </head>
 <body>
     <!-- 
-      IMPORTANTE: Para que este iframe funcione, debes desplegar la aplicación de Next.js
-      y reemplazar la URL en el atributo 'src' con la URL pública de tu despliegue.
-      
-      Ejemplo:
-      Si tu aplicación está desplegada en https://mi-comparador.com, el iframe debería ser:
-      <iframe src="https://mi-comparador.com"></iframe>
+      IMPORTANTE:
+      Asegúrate de que la URL en el atributo 'src' apunte a tu aplicación desplegada.
+      El parámetro `?embed=true` al final de la URL es crucial, ya que activa el modo de inserción,
+      eliminando la cabecera y el pie de página para una mejor integración.
     -->
-    <iframe src="https://smartphonesvs.vercel.app/"></iframe>
+    <iframe src="https://smartphonesvs.vercel.app/?embed=true"></iframe>
 </body>
 </html>

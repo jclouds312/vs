@@ -1,7 +1,8 @@
 
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/header';
 import { PhoneSelector } from '@/components/phone-selector';
 import { ComparisonView } from '@/components/comparison-view';
@@ -9,11 +10,12 @@ import { phones } from '@/lib/phones';
 import type { Phone } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Search } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 
-export default function Home() {
+function SmartCompareContent() {
   const [phone1, setPhone1] = useState<Phone | null>(null);
   const [phone2, setPhone2] = useState<Phone | null>(null);
+  const searchParams = useSearchParams();
+  const isEmbedded = searchParams.get('embed') === 'true';
 
   const handleReset = () => {
     setPhone1(null);
@@ -54,7 +56,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <Header />
+      {!isEmbedded && <Header />}
       <main className="flex-1 container mx-auto p-4 md:p-8">
         <div className="space-y-8">
           {!showComparison ? (
@@ -123,9 +125,20 @@ export default function Home() {
           )}
         </div>
       </main>
-      <footer className="py-4 text-center text-muted-foreground text-sm">
-        © {new Date().getFullYear()} SmartCompare. Todos los derechos reservados.
-      </footer>
+      {!isEmbedded && (
+        <footer className="py-4 text-center text-muted-foreground text-sm">
+          © {new Date().getFullYear()} SmartCompare. Todos los derechos reservados.
+        </footer>
+      )}
     </div>
+  );
+}
+
+export default function Home() {
+  // El Suspense Boundary es necesario para que useSearchParams funcione correctamente durante el renderizado del lado del servidor.
+  return (
+    <React.Suspense fallback={<div>Cargando...</div>}>
+      <SmartCompareContent />
+    </React.Suspense>
   );
 }
