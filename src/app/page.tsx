@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/header';
 import { PhoneSelector } from '@/components/phone-selector';
@@ -27,6 +27,20 @@ function SmartCompareContent() {
     const p2 = phones.find(p => p.name === phone2Name);
     if (p1) setPhone1(p1);
     if (p2) setPhone2(p2);
+  };
+
+  const handleSelectPhone1 = (phone: Phone) => {
+    if (phone2 && phone.id === phone2.id) {
+      setPhone2(phone1);
+    }
+    setPhone1(phone);
+  };
+  
+  const handleSelectPhone2 = (phone: Phone) => {
+    if (phone1 && phone.id === phone1.id) {
+      setPhone1(phone2);
+    }
+    setPhone2(phone);
   };
 
   const showComparison = phone1 && phone2;
@@ -57,15 +71,15 @@ function SmartCompareContent() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isEmbedded && <Header />}
-      <main className="flex-1 container mx-auto px-4 pt-1 md:pt-2 pb-8">
-        <div className="space-y-4">
+      <main className="flex-1 container mx-auto px-4 pb-8">
+        <div className="space-y-4 pt-1">
           {!showComparison ? (
              <>
                <div className="grid grid-cols-[1fr_auto_1fr] gap-1 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
-                    onSelectPhone={setPhone1}
+                    onSelectPhone={handleSelectPhone1}
                     onClear={() => setPhone1(null)}
                     title="Smartphone 1"
                     disabledIds={phone2 ? [phone2.id] : []}
@@ -76,7 +90,7 @@ function SmartCompareContent() {
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone2}
-                    onSelectPhone={setPhone2}
+                    onSelectPhone={handleSelectPhone2}
                     onClear={() => setPhone2(null)}
                     title="Smartphone 2"
                     disabledIds={phone1 ? [phone1.id] : []}
