@@ -310,7 +310,7 @@ export const phones: Phone[] = [
     name: 'Huawei Pura 70 Ultra',
     brand: 'Huawei',
     price: 1450,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/huawei-pura70-ultra.jpg',
+    image: 'https://fdn2.gsmarena.com/vv/bigpic/huawei-pura-70-ultra.jpg',
     specs: {
       display: '6.8" LTPO OLED',
       camera: '50MP Retractable',
