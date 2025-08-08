@@ -58,28 +58,32 @@ function SmartCompareContent() {
     <div className="flex flex-col min-h-screen bg-background">
       {!isEmbedded && <Header />}
       <main className="flex-1 container mx-auto px-4 pt-2 md:pt-4 pb-8">
-        <div className="space-y-8">
+        <div className="space-y-4">
           {!showComparison ? (
              <>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
                     onSelectPhone={setPhone1}
                     onClear={() => setPhone1(null)}
-                    title="Teléfono 1"
+                    title="Smartphone 1 a elegir"
                     disabledIds={phone2 ? [phone2.id] : []}
                   />
+                  <div className="hidden md:flex items-center justify-center h-full">
+                    <p className="text-xl font-bold text-primary self-center pt-12">VS</p>
+                  </div>
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone2}
                     onSelectPhone={setPhone2}
                     onClear={() => setPhone2(null)}
-                    title="Teléfono 2"
+                    title="Smartphone 2 a elegir"
                     disabledIds={phone1 ? [phone1.id] : []}
                   />
                 </div>
-                <div className="text-center space-y-6 pt-4">
+                 <div className="text-center text-lg font-semibold text-muted-foreground -mt-2">a comparar versus</div>
+                <div className="text-center space-y-6 pt-8">
                   <div className="flex items-center justify-center gap-2 text-muted-foreground">
                     <Search className="w-4 h-4" />
                     <h3 className="text-sm font-semibold uppercase tracking-wider">Búsquedas de ejemplo</h3>
