@@ -25,7 +25,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
   const [open, setOpen] = useState(false);
 
   return (
-    <Card className="w-full max-w-sm mx-auto">
+    <Card className="w-full max-w-xs mx-auto">
       <CardHeader>
         <CardTitle className="text-primary">{title}</CardTitle>
       </CardHeader>

@@ -61,7 +61,7 @@ function SmartCompareContent() {
         <div className="space-y-4">
           {!showComparison ? (
              <>
-               <div className="grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-2 items-start justify-center">
+               <div className="grid grid-cols-[1fr_auto_1fr] gap-2 md:gap-1 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
