@@ -57,28 +57,28 @@ function SmartCompareContent() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {!isEmbedded && <Header />}
-      <main className="flex-1 container mx-auto px-4 pt-2 md:pt-4 pb-8">
+      <main className="flex-1 container mx-auto px-4 pt-1 md:pt-2 pb-8">
         <div className="space-y-4">
           {!showComparison ? (
              <>
-               <div className="grid grid-cols-[1fr_auto_1fr] gap-2 md:gap-1 items-start justify-center">
+               <div className="grid grid-cols-[1fr_auto_1fr] gap-1 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
                     onSelectPhone={setPhone1}
                     onClear={() => setPhone1(null)}
-                    title="Smartphone 1 a elegir"
+                    title="Smartphone 1"
                     disabledIds={phone2 ? [phone2.id] : []}
                   />
-                  <div className="flex items-center justify-center h-full pt-16">
-                    <p className="text-sm font-bold text-muted-foreground self-center">a comparar versus</p>
+                  <div className="flex items-center justify-center h-full pt-12">
+                    <p className="text-xs font-bold text-muted-foreground self-center">vs</p>
                   </div>
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone2}
                     onSelectPhone={setPhone2}
                     onClear={() => setPhone2(null)}
-                    title="Smartphone 2 a elegir"
+                    title="Smartphone 2"
                     disabledIds={phone1 ? [phone1.id] : []}
                   />
                 </div>
