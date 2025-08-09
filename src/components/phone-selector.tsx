@@ -100,7 +100,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                           setOpen(false);
                         }}
                         disabled={disabledIds.includes(phone.id)}
-                        className="flex items-center justify-between"
+                        className="flex items-center justify-between aria-selected:text-accent-foreground"
                       >
                          <div className="flex items-center gap-2 overflow-hidden">
                             <Image src={phone.image} alt={phone.name} width={25} height={40} className="rounded-sm object-contain" data-ai-hint={`${phone.brand} ${phone.name}`}/>

@@ -59,7 +59,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone1}
                     onClear={() => setPhone1(null)}
                     title="Smartphone 1"
-                    disabledIds={[]}
+                    disabledIds={phone2 ? [phone2.id] : []}
                   />
                   <div className="flex items-center justify-center h-full pt-12 px-1">
                     <p className="text-xs font-bold text-muted-foreground self-center">vs</p>
@@ -70,7 +70,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone2}
                     onClear={() => setPhone2(null)}
                     title="Smartphone 2"
-                    disabledIds={[]}
+                    disabledIds={phone1 ? [phone1.id] : []}
                   />
                 </div>
                  <div className="text-center pt-8 space-y-4">
@@ -99,6 +99,20 @@ function SmartCompareContent() {
                           </Button>
                           <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Xiaomi 13T Pro', 'OnePlus 12')}>
                               Xiaomi vs OnePlus
+                          </Button>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-2">Comparativas Populares</h3>
+                       <div className="flex flex-wrap gap-2 justify-center">
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Galaxy S24', 'Pixel 8')}>
+                              Gama Alta Compacto
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('iPhone 15', 'Galaxy S24')}>
+                              Apple vs Samsung Base
+                          </Button>
+                           <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Galaxy A55', 'Pixel 7a')}>
+                              Gama Media Premium
                           </Button>
                       </div>
                     </div>
