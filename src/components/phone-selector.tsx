@@ -25,13 +25,13 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
   const [open, setOpen] = useState(false);
 
   return (
-    <Card className="w-full max-w-[220px] mx-auto">
-      <CardHeader className="p-4">
-        <CardTitle className="text-primary text-base">{title}</CardTitle>
+    <Card className="w-full max-w-[180px] mx-auto">
+      <CardHeader className="p-3">
+        <CardTitle className="text-primary text-sm">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="p-4 pt-0 space-y-3">
+      <CardContent className="p-3 pt-0 space-y-2">
         {selectedPhone ? (
-          <div className="space-y-3">
+          <div className="space-y-2">
             <Card className="overflow-hidden">
                 <div className="relative aspect-square w-full">
                     <Image
@@ -43,33 +43,33 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                     data-ai-hint={`${selectedPhone.brand} ${selectedPhone.name}`}
                     />
                 </div>
-                <div className='p-3'>
-                    <CardHeader className="p-0 mb-2">
-                        <CardTitle className="text-sm">{selectedPhone.name}</CardTitle>
-                        <CardDescription className="text-xs">{selectedPhone.brand}</CardDescription>
+                <div className='p-2'>
+                    <CardHeader className="p-0 mb-1">
+                        <CardTitle className="text-xs">{selectedPhone.name}</CardTitle>
+                        <CardDescription className="text-[11px]">{selectedPhone.brand}</CardDescription>
                     </CardHeader>
                     <CardContent className="p-0 space-y-1">
                         <Badge variant="secondary" className="text-xs">${selectedPhone.price}</Badge>
-                        <div className="text-xs text-muted-foreground space-y-1">
-                          <div className="flex items-center gap-1.5">
-                            <Smartphone className="w-3 h-3"/>
-                            <span className="text-[11px]">{selectedPhone.specs.display}</span>
+                        <div className="text-[10px] text-muted-foreground space-y-0.5">
+                          <div className="flex items-center gap-1">
+                            <Smartphone className="w-2.5 h-2.5"/>
+                            <span className="truncate">{selectedPhone.specs.display}</span>
                           </div>
-                          <div className="flex items-center gap-1.5">
-                            <Camera className="w-3 h-3"/>
-                            <span className="text-[11px]">{selectedPhone.specs.camera}</span>
+                          <div className="flex items-center gap-1">
+                            <Camera className="w-2.5 h-2.5"/>
+                            <span className="truncate">{selectedPhone.specs.camera}</span>
                           </div>
-                          <div className="flex items-center gap-1.5">
-                            <Battery className="w-3 h-3"/>
-                            <span className="text-[11px]">{selectedPhone.specs.battery}</span>
+                          <div className="flex items-center gap-1">
+                            <Battery className="w-2.5 h-2.5"/>
+                            <span className="truncate">{selectedPhone.specs.battery}</span>
                           </div>
                         </div>
                     </CardContent>
                 </div>
             </Card>
-            <Button variant="outline" size="sm" onClick={onClear} className="w-full h-8 text-xs">
-              <X className="mr-2 h-3 w-3" />
-              Cambiar selección
+            <Button variant="outline" size="sm" onClick={onClear} className="w-full h-7 text-xs">
+              <X className="mr-1.5 h-3 w-3" />
+              Cambiar
             </Button>
           </div>
         ) : (
@@ -79,10 +79,10 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="w-full justify-between h-9 text-xs"
+                className="w-full justify-between h-8 text-xs"
               >
                 {selectedPhone ? selectedPhone.name : "Seleccionar..."}
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="ml-2 h-3 w-3 shrink-0 opacity-50" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[--radix-popover-trigger-width] p-0">
