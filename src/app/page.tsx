@@ -73,6 +73,23 @@ function SmartCompareContent() {
                     disabledIds={[]}
                   />
                 </div>
+                 <div className="text-center pt-8">
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Búsquedas sugeridas (Modelos 2025)</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Galaxy S24 Ultra', 'iPhone 15 Pro')}>
+                            Galaxy S24 Ultra vs iPhone 15 Pro
+                        </Button>
+                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Pixel 8 Pro', 'Xiaomi 14 Ultra')}>
+                            Pixel 8 Pro vs Xiaomi 14 Ultra
+                        </Button>
+                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Realme GT 6', 'Motorola Edge 50 Ultra')}>
+                            Realme GT 6 vs Motorola Edge 50 Ultra
+                        </Button>
+                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Oppo Find X7 Ultra', 'Vivo X100 Pro')}>
+                            Oppo Find X7 Ultra vs Vivo X100 Pro
+                        </Button>
+                    </div>
+                </div>
             </>
           ) : (
             <>
