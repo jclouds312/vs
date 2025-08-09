@@ -52,16 +52,16 @@ function SmartCompareContent() {
         <div className="space-y-4 pt-1">
           {!showComparison ? (
              <>
-               <div className="grid grid-cols-[1fr_auto_1fr] gap-1 items-start justify-center">
+               <div className="flex gap-0.5 items-start justify-center">
                   <PhoneSelector
                     phones={phones}
                     selectedPhone={phone1}
                     onSelectPhone={handleSelectPhone1}
                     onClear={() => setPhone1(null)}
                     title="Smartphone 1"
-                    disabledIds={[]}
+                    disabledIds={phone2 ? [phone2.id] : []}
                   />
-                  <div className="flex items-center justify-center h-full pt-12">
+                  <div className="flex items-center justify-center h-full pt-12 px-1">
                     <p className="text-xs font-bold text-muted-foreground self-center">vs</p>
                   </div>
                   <PhoneSelector
@@ -70,7 +70,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone2}
                     onClear={() => setPhone2(null)}
                     title="Smartphone 2"
-                    disabledIds={[]}
+                    disabledIds={phone1 ? [phone1.id] : []}
                   />
                 </div>
                  <div className="text-center pt-8">

@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: 210 20% 95%;
+    --background: 210 20% 98%; /* Blanco crema gris */
     --foreground: 210 9% 31%;
     --card: 0 0% 100%;
     --card-foreground: 210 9% 31%;
@@ -19,7 +19,7 @@ body {
     --secondary: 210 20% 88%;
     --secondary-foreground: 210 9% 31%;
     --muted: 210 20% 88%;
-    --muted-foreground: 210 5% 55%;
+    --muted-foreground: 190 95% 45%; /* Azul Cian Claro */
     --accent: 40 90% 55%;
     --accent-foreground: 210 9% 31%;
     --destructive: 0 84.2% 60.2%;
@@ -54,7 +54,7 @@ body {
     --secondary: 210 10% 20%;
     --secondary-foreground: 0 0% 98%;
     --muted: 210 10% 20%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted-foreground: 190 95% 55%; /* Azul Cian Claro para modo oscuro */
     --accent: 40 90% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
