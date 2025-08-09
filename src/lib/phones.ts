@@ -182,7 +182,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 13T Pro',
     brand: 'Xiaomi',
     price: 650,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13t-pro.jpg',
+    image: 'https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-13t-pro/specs01.png',
     specs: {
       display: '6.67" CrystalRes AMOLED',
       camera: '50MP Main (Leica)',
@@ -198,7 +198,7 @@ export const phones: Phone[] = [
     name: 'Xiaomi 14 Ultra',
     brand: 'Xiaomi',
     price: 1499,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg',
+    image: 'https://i02.appmifile.com/i02/h5/responsive/product/xiaomi-14-ultra/img/design-img-1-cn.png',
     specs: {
         display: '6.73" WQHD+ Dynamic AMOLED',
         camera: '50MP Main (Leica)',
@@ -278,7 +278,7 @@ export const phones: Phone[] = [
     name: 'Realme GT 6',
     brand: 'Realme',
     price: 600,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/realme-gt-6.jpg',
+    image: 'https://image.realme.com/global/product/realme-gt-6/images-pc/f-1-d703b71f92.png',
     specs: {
       display: '6.78" LTPO AMOLED',
       camera: '50MP Main',
@@ -310,7 +310,7 @@ export const phones: Phone[] = [
     name: 'Sony Xperia 1 VI',
     brand: 'Sony',
     price: 1399,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-vi.jpg',
+    image: 'https://www.sony.es/image/5d02da9b275b1192b3952f10cf91a139?fmt=png-alpha&wid=480',
     specs: {
       display: '6.5" LTPO OLED',
       camera: '48MP Wide',
@@ -326,7 +326,7 @@ export const phones: Phone[] = [
     name: 'Asus Zenfone 11 Ultra',
     brand: 'Asus',
     price: 899,
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/asus-zenfone-11-ultra.jpg',
+    image: 'https://dlcdnwebimgs.asus.com/gain/3f191542-a281-4b19-9154-19266f8116eb/w240/h170',
     specs: {
       display: '6.78" LTPO AMOLED',
       camera: '50MP Main',
