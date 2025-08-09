@@ -25,7 +25,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
   const [open, setOpen] = useState(false);
 
   return (
-    <Card className="w-full max-w-[280px] mx-auto">
+    <Card className="w-full max-w-[220px] mx-auto">
       <CardHeader className="p-4">
         <CardTitle className="text-primary text-base">{title}</CardTitle>
       </CardHeader>
@@ -45,30 +45,30 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                 </div>
                 <div className='p-3'>
                     <CardHeader className="p-0 mb-2">
-                        <CardTitle className="text-base">{selectedPhone.name}</CardTitle>
+                        <CardTitle className="text-sm">{selectedPhone.name}</CardTitle>
                         <CardDescription className="text-xs">{selectedPhone.brand}</CardDescription>
                     </CardHeader>
                     <CardContent className="p-0 space-y-1">
-                        <Badge variant="secondary" className="text-sm">${selectedPhone.price}</Badge>
+                        <Badge variant="secondary" className="text-xs">${selectedPhone.price}</Badge>
                         <div className="text-xs text-muted-foreground space-y-1">
                           <div className="flex items-center gap-1.5">
-                            <Smartphone className="w-3.5 h-3.5"/>
-                            <span>{selectedPhone.specs.display}</span>
+                            <Smartphone className="w-3 h-3"/>
+                            <span className="text-[11px]">{selectedPhone.specs.display}</span>
                           </div>
                           <div className="flex items-center gap-1.5">
-                            <Camera className="w-3.5 h-3.5"/>
-                            <span>{selectedPhone.specs.camera}</span>
+                            <Camera className="w-3 h-3"/>
+                            <span className="text-[11px]">{selectedPhone.specs.camera}</span>
                           </div>
                           <div className="flex items-center gap-1.5">
-                            <Battery className="w-3.5 h-3.5"/>
-                            <span>{selectedPhone.specs.battery}</span>
+                            <Battery className="w-3 h-3"/>
+                            <span className="text-[11px]">{selectedPhone.specs.battery}</span>
                           </div>
                         </div>
                     </CardContent>
                 </div>
             </Card>
-            <Button variant="outline" size="sm" onClick={onClear} className="w-full">
-              <X className="mr-2 h-4 w-4" />
+            <Button variant="outline" size="sm" onClick={onClear} className="w-full h-8 text-xs">
+              <X className="mr-2 h-3 w-3" />
               Cambiar selección
             </Button>
           </div>
@@ -79,7 +79,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="w-full justify-between h-10 text-sm"
+                className="w-full justify-between h-9 text-xs"
               >
                 {selectedPhone ? selectedPhone.name : "Seleccionar..."}
                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -104,7 +104,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                       >
                          <div className="flex items-center gap-2 overflow-hidden">
                             <Image src={phone.image} alt={phone.name} width={25} height={40} className="rounded-sm object-contain" data-ai-hint={`${phone.brand} ${phone.name}`}/>
-                            <span className="truncate">{phone.name}</span>
+                            <span className="truncate text-xs">{phone.name}</span>
                         </div>
                         <Check
                           className={cn(
