@@ -82,7 +82,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone1}
                     onClear={() => setPhone1(null)}
                     title="Smartphone 1"
-                    disabledIds={phone2 ? [phone2.id] : []}
+                    disabledIds={[]}
                   />
                   <div className="flex items-center justify-center h-full pt-12">
                     <p className="text-xs font-bold text-muted-foreground self-center">vs</p>
@@ -93,7 +93,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone2}
                     onClear={() => setPhone2(null)}
                     title="Smartphone 2"
-                    disabledIds={phone1 ? [phone1.id] : []}
+                    disabledIds={[]}
                   />
                 </div>
                 <div className="text-center space-y-6 pt-8">

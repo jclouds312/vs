@@ -26,10 +26,10 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
 
   return (
     <Card className="w-full max-w-[180px] mx-auto">
-      <CardHeader className="p-3">
+      <CardHeader className="p-2 pb-1">
         <CardTitle className="text-primary text-sm">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="p-3 pt-0 space-y-2">
+      <CardContent className="p-2 pt-0 space-y-2">
         {selectedPhone ? (
           <div className="space-y-2">
             <Card className="overflow-hidden">
