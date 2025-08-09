@@ -25,13 +25,13 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
   const [open, setOpen] = useState(false);
 
   return (
-    <Card className="w-full max-w-[180px] mx-auto">
-      <CardHeader className="p-2 pb-1">
+    <Card className="w-full max-w-[170px] mx-auto">
+      <CardHeader className="p-1 pb-0">
         <CardTitle className="text-primary text-sm">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="p-2 pt-0 space-y-2">
+      <CardContent className="p-1 pt-0 space-y-1">
         {selectedPhone ? (
-          <div className="space-y-2">
+          <div className="space-y-1">
             <Card className="overflow-hidden">
                 <div className="relative aspect-square w-full">
                     <Image
@@ -79,7 +79,7 @@ export function PhoneSelector({ phones, selectedPhone, onSelectPhone, onClear, t
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="w-full justify-between h-8 text-xs"
+                className="w-full justify-between h-7 text-xs px-2"
               >
                 {selectedPhone ? selectedPhone.name : "Seleccionar..."}
                 <ChevronsUpDown className="ml-2 h-3 w-3 shrink-0 opacity-50" />
