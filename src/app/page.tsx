@@ -59,7 +59,7 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone1}
                     onClear={() => setPhone1(null)}
                     title="Smartphone 1"
-                    disabledIds={phone2 ? [phone2.id] : []}
+                    disabledIds={[]}
                   />
                   <div className="flex items-center justify-center h-full pt-12 px-1">
                     <p className="text-xs font-bold text-muted-foreground self-center">vs</p>
@@ -70,24 +70,37 @@ function SmartCompareContent() {
                     onSelectPhone={handleSelectPhone2}
                     onClear={() => setPhone2(null)}
                     title="Smartphone 2"
-                    disabledIds={phone1 ? [phone1.id] : []}
+                    disabledIds={[]}
                   />
                 </div>
-                 <div className="text-center pt-8">
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Búsquedas sugeridas (Modelos 2025)</h3>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Galaxy S24 Ultra', 'iPhone 15 Pro')}>
-                            Galaxy S24 Ultra vs iPhone 15 Pro
-                        </Button>
-                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Pixel 8 Pro', 'Xiaomi 14 Ultra')}>
-                            Pixel 8 Pro vs Xiaomi 14 Ultra
-                        </Button>
-                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Realme GT 6', 'Motorola Edge 50 Ultra')}>
-                            Realme GT 6 vs Motorola Edge 50 Ultra
-                        </Button>
-                        <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Oppo Find X7 Ultra', 'Vivo X100 Pro')}>
-                            Oppo Find X7 Ultra vs Vivo X100 Pro
-                        </Button>
+                 <div className="text-center pt-8 space-y-4">
+                    <div>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-2">Duelos de Gama Alta</h3>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Galaxy S24 Ultra', 'iPhone 15 Pro')}>
+                              Samsung vs Apple
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Pixel 8 Pro', 'Xiaomi 14 Ultra')}>
+                              Google vs Xiaomi
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Oppo Find X7 Ultra', 'Vivo X100 Pro')}>
+                              Fotografía China
+                          </Button>
+                      </div>
+                    </div>
+                     <div>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-2">Mejor Calidad-Precio</h3>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                           <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Realme GT 6', 'Motorola Edge 50 Ultra')}>
+                              Realme vs Motorola
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Pixel 7a', 'Nothing Phone (2)')}>
+                              Pixel vs Nothing
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => handleSampleSearch('Xiaomi 13T Pro', 'OnePlus 12')}>
+                              Xiaomi vs OnePlus
+                          </Button>
+                      </div>
                     </div>
                 </div>
             </>
