@@ -46,7 +46,7 @@ function SmartCompareContent() {
   const showComparison = phone1 && phone2;
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="bg-background">
       {!isEmbedded && <Header />}
       <main className="flex-1 container mx-auto px-4 pb-8">
         <div className="space-y-4 pt-1">
