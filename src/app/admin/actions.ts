@@ -20,6 +20,8 @@ export async function login(formData: FormData) {
 
   const { email, password } = parsed.data;
 
+  // Estas son las credenciales de administrador.
+  // Cámbialas por valores más seguros en un entorno de producción.
   if (email === 'john474nvallejo@gmail.com' && password === '123456') {
     return { success: true, message: 'Inicio de sesión exitoso.' };
   }
